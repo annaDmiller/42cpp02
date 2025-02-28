@@ -63,7 +63,7 @@ int Fixed::toInt(void) const
 std::ostream &operator<<(std::ostream& out, const Fixed& number)
 {
     if (number.toFloat() == (int)number.toFloat())
-        out << std::fixed << std::setprecision(0) << number.toFloat();
+        out << number.toInt();
     else
         out << std::fixed << std::setprecision(2) << number.toFloat();
     return (out);
