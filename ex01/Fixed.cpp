@@ -12,7 +12,7 @@ Fixed::Fixed(const int num) : num_value(num << bits)
     return ;
 }
 
-Fixed::Fixed(const float num) : num_value(static_cast<int>(num * (1 << bits)))
+Fixed::Fixed(const float num) : num_value((int)roundf(num * (1 << bits)))
 {
     std::cout << "Float constructor called" << std::endl;
     return ;
@@ -52,7 +52,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-    return (static_cast<float>(this->num_value) / (1 << bits));
+    return ((float)(this->num_value) / (1 << bits));
 }
 
 int Fixed::toInt(void) const
@@ -65,6 +65,6 @@ std::ostream &operator<<(std::ostream& out, const Fixed& number)
     if (number.toFloat() == (int)number.toFloat())
         out << number.toInt();
     else
-        out << std::fixed << std::setprecision(2) << number.toFloat();
+        out << number.toFloat();
     return (out);
 }
