@@ -2,9 +2,10 @@ CC = c++
 
 CC_FLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME =
+NAME = fixed_point
 
-SOURCES =
+SOURCES =	main.cpp \
+			Fixed.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
