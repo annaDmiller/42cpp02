@@ -2,9 +2,12 @@ CC = c++
 
 CC_FLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME =
+NAME = bsp
 
-SOURCES =
+SOURCES =	main.cpp \
+			Fixed.cpp \
+			Point.cpp \
+			bsp.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
