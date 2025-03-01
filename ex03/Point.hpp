@@ -3,12 +3,14 @@
 
 # include <string>
 # include "Fixed.hpp"
+# include <iostream>
+# include <cmath>
 
 class Point
 {
     private:
-        Fixed &x;
-        Fixed &y;
+        Fixed x;
+        Fixed y;
 
     public:
         Point(void);
@@ -18,8 +20,8 @@ class Point
         ~Point(void);
 
         bool operator==(const Point &other) const;
-        Fixed &get_x(void) const;
-        Fixed &get_y(void) const;
+        Fixed get_x(void) const;
+        Fixed get_y(void) const;
 };
 
 bool bsp(Point const a, Point const b, Point const c, Point const point);
