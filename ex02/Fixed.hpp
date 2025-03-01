@@ -22,6 +22,18 @@ class Fixed
         void setRawBits(int const raw);
         float toFloat(void) const;
         int toInt(void) const;
+
+        bool operator>(const Fixed &other);
+        bool operator<(const Fixed &other);
+        bool operator>=(const Fixed &other);
+        bool operator<=(const Fixed &other);
+        bool operator==(const Fixed &other);
+        bool operator!=(const Fixed &other);
+
+        int operator+(const Fixed &other);
+        int operator-(const Fixed &other);
+        int operator*(const Fixed &other);
+        int operator/(const Fixed &other);
 };
 
 std::ostream &operator<<(std::ostream& out, const Fixed& number);
