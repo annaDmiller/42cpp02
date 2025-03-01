@@ -39,8 +39,7 @@ bool Point::operator==(const Point &other) const
 
 Fixed Point::get_x(void) const
 {
-    Fixed temp = Fixed(this->x);
-    return (temp);
+    return (this->x);
 }
 
 Fixed Point::get_y(void) const
