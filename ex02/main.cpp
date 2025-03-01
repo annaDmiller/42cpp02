@@ -44,7 +44,11 @@ int main(void)
     std::cout << "b1 = b; b == b1 ? " << (b == b1) << std::endl;
     std::cout << std::endl;
 
-    //std::cout << Fixed::max( a, b ) << std::endl;
+    std::cout << "MIN/MAX" << std::endl;
+    std::cout << "MAX between a and b - (b)" << Fixed::max( a, b ) << std::endl;
+    std::cout << "MIN between a and b - (a)" << Fixed::min( a, b ) << std::endl;
+    std::cout << "MAX between b and c - (b)" << Fixed::max( b, c ) << std::endl;
+    std::cout << "MIN between b and c - (c)" << Fixed::min( b, c ) << std::endl;
 
     return 0;
 }

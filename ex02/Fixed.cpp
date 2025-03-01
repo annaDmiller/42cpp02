@@ -158,3 +158,31 @@ Fixed Fixed::operator--(int)
     this->setRawBits(this->getRawBits() - 1);
     return (temp);
 }
+
+Fixed &Fixed::min(Fixed &first, Fixed &second)
+{
+    if (first < second)
+        return (first);
+    return (second);
+}
+
+const Fixed &Fixed::min(const Fixed &first, const Fixed &second)
+{
+    if (first < second)
+        return (first);
+    return (second);
+}
+
+Fixed &Fixed::max(Fixed &first, Fixed &second)
+{
+    if (first > second)
+        return (first);
+    return (second);
+}
+
+const Fixed &Fixed::max(const Fixed &first, const Fixed &second)
+{
+    if (first > second)
+        return (first);
+    return (second);
+}
